@@ -1,6 +1,8 @@
 # ROOter-docs
 Documentation for the ROOter GoldenOrb project.
 
+## [You are probably looking for the wiki here.](https://github.com/nathhad/ROOter-docs/wiki)
+
 The ROOter GoldenOrb project has traditionally been hosted on individual websites by lead developer Dairyman and several volunteers. The main components are:
 
 - Dairyman's [OfModemsAndMen](https://ofmodemsandmen.com/) page (currently down)
