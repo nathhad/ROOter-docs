@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="/web/20260617061914cs_/assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>ROOter Build Systems</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>DIY ROOter</p>
+								<h2>Create an ROOter Build System</h2>
+							</header>
+							<div class="content">
+							<p>To create a OpenWrt build system that can be used to create ROOter images you need a computer that is running Linux.</p>
+							<p>This can be a Virtual Machine running in Windows or Linux running on a computer. The recommended Linux distros to use for this are Linux Mint, Ubuntu 18.04 or Debian. ROOter images are made using Linux Mint 20. This computer must have Internet access in order to download the files needed to create an OpenWrt build system.</p>
+							<p>Using the File Manager of your Linux distro, create a folder that will contain the build system. It is possible to have multiple build systems resident in this folder if you want to build images with different OpenWrt versions.</p> 
+							<p>We will name this folder <strong>OpenWrt</strong> but it can be called anything.</p> 
+							<p>Using the File Manager go to the <strong>OpenWrt</strong> folder and open a Terminal session. How this is done depends on the distro used. In Linux Mint you right click and chose Open in Terminal.</p>
+							<p>The first thing that needs to be done is to add all the extra packages to your distro that are required when building an image. This is done from the Terminal by entering the following commands.</p>
+							<p style="font-size: 20px"><u>For Linux Mint</u></p>
+							<p><strong>sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev quilt 
+							sudo apt-get install gawk flex quilt libssl-dev xsltproc libxml-parser-perl jshon</strong></p>
+							<p style="font-size: 20px"><u>For Ubuntu</u></p>
+							<p><strong>sudo apt -y install build-essential libncurses5-dev python unzip gawk git curl jshon</strong></p>
+							<p style="font-size: 20px"><u>For Debian 11</u></p>
+							<p><strong>sudo apt install build-essential bash binutils bzip2 flex git-core g++ gcc util-linux gawk 
+							sudo apt install help2man intltool libelf-dev zlib1g-dev make libglvnd-dev pkg-config
+							sudo apt install libncurses5-dev libssl-dev patch perl-modules git ncurses-dev libz-dev
+							sudo apt install python2-dev wget gettext xsltproc zlib1g-dev zip unzip libssl-dev
+							sudo apt install python2 python3-dev libelf-dev subversion gettext gawk wget curl
+							sudo apt install rsync perl unrar rar jshon</strong></p>
+							
+							<p>Once you have the required packages installed you can create the build system. At the Terminal enter the following lines, waiting for each to complete before entering the next one.</p>
+
+							<p>This will take a bit of time and requires an Internet connection.</p>
+
+							<p>There are a number of different build systems for ROOter depending on which OpenWrt version you want to use. Different routers use different build systems that are matched to the specifications of the router. Newer build systems usually require more processor power and flash/RAM so you have to chose the correct build system for your router.</p>
+
+							<p>The first step is to clone the build system from a Git. The following is a list of the command you need to run to do this for each OpenWrt version.</p>
+							
+							<div class="table-wrapper">
+								<table class="alt">
+									<tbody>
+									   <tr>
+										  <td style="font-size: 20px">Version 19.07</td>
+										  <td>
+											 <div align="center"><strong>git clone https://github.com/ofmodemsandmen/ROOterSource source1907</strong></div>
+										  </td>
+										  
+									   </tr>
+									   <tr>
+										  <td style="font-size: 20px">Version 21.02</td>
+										  <td>
+											 <div align="center"><strong>git clone https://github.com/ofmodemsandmen/ROOterSource2102 source2102</strong></div>
+										  </td>
+										  
+									   </tr>
+									   <tr>
+										  <td style="font-size: 20px">Version 22.03</td>
+										  <td>
+											 <div align="center"><strong>git clone https://github.com/ofmodemsandmen/ROOterSource2203 source2203</strong></div>
+										  </td>
+										  
+									   </tr>
+									   <tr>
+										  <td style="font-size: 20px">Version 23.05</td>
+										  <td>
+											 <div align="center"><strong>git clone https://github.com/ofmodemsandmen/RooterSource2305 source2305</strong></div>
+										  </td>
+										  
+									   </tr>
+									   <tr>
+										  <td style="font-size: 20px">Version Master</td>
+										  <td>
+											 <div align="center"><strong>git clone https://github.com/ofmodemsandmen/SourceMaster sourcemaster</strong></div>
+										  </td>
+										  
+									   </tr>
+									   <tr>
+										  <td style="font-size: 20px">Version Main</td>
+										  <td>
+											 <div align="center"><strong>git clone https://gitlab.com/ofmodemsandmen/SourceMain sourcemain</strong></div>
+										  </td>
+										  
+									   </tr>
+									</tbody>
+								</table>
+							</div>
+							<p>Check the firmware downloads at <a href="http://aturnofthenut.com/autobuilds/" class="submit icon fa-download"> ROOter Autobuilds</a> to see which build system is used for your router. The suffix at the end of the file name will tell which build system is used.</p>
+							<ul>
+								<li>AB19 - OpenWrt 19.07</li>
+								<li>AB21 - OpenWrt 21.02</li>
+								<li>AB22 - OpenWrt 22.03</li>
+								<li>AB23 - OpenWrt 23.05</li>
+								<li>ABSM - OpenWrt Master</li>
+								<li>ABSmn - OpenWrt Main</li>
+							</ul>
+							<p>Both Master and Main are Snapshot versions of OpenWrt and are newer that the official 23.05 version. Main is about 6 months newer than Master. Both Master and Main require a router with more than 16meg of flash memory because of the increased size of the kernel version being used.</p>
+							<p>Run one of the above commands to create a build system in the folder whose name is at the end of the command (ie. source2102, sourcemain, etc). This will take some time as it must download the build system and set it up. Once this has completed you can close the Terminal session as the build system is ready to use.</p>
+							
+							<p style="font-size: 20px"><u>Creating a Firmware</u></p>
+							<p>There are two steps to creating a new image, defining the router and the packages in the image and compiling the image. To do this use the File Manager to go to the build system folder and open a Terminal session there.</p>
+
+							<p>If you wish to customize the firmware by adding extra packages you must edit the router’s configuration file. If you are just making a standard ROOter firmware then you can skip this step. If you are customizing the firmware then to find the name of the configuration file run this in the Terminal.</p>
+							<p><strong>./build</strong></p>
+							<p>This will give you a list of the configuration files that this build system supports. For the Main build system it will like this.</p>
+							<p><img src="/web/20260617061914im_/images/builds.jpg" alt=""/></p>
+							<p>The names of the configuration file will, in most cases, indicate which router they are for. You can also look in the <strong>/configfiles/template</strong> folder and see the name of the files there. They all start with “.config_” and what follows is the name you want.</p>
+							<p>To customize the configuration file you enter this in the Terminal.</p>
+							<p><strong>./menu config_name</strong></p>
+							<p>where <strong>config_name</strong> is one of the above names without the “.config_” prefix. The name should be in lower case like</p>
+							<p><strong>./menu x3000</strong></p>
+							<p>This will open the standard OpenWrt configuration window in the Terminal so you can add new packages to the firmware.</p>
+							<p><img src="/web/20260617061914im_/images/openc.jpg" alt=""/></p>
+							<p>When you exit, if you chose to save the changes, the configuration file in <strong>/configfiles/template</strong> will be updated.</p>
+
+							<p>The next step is to compile the firmware using the router’s configuration file. This is done by running this in the Terminal.</p>
+							<p><strong>./build config_name</strong></p>
+							<p>where <strong>config_name</strong> is one of the above names without the “.config_” prefix. The name should be in lower case like</p>
+							<p><strong>./build x3000</strong></p>
+							<p>This will compile the firmware and rename the resulting files into the ROOter format, then place a Zipped archive of them into the <strong>/images</strong> folder ready for your use.</p>
+
+							<p>The first time you build a firmware with a new build system it needs to download all the packages needed for the process. This is a large number of files, 4GB for the Main build system, so it takes a while to finish running. The speed depends a lot on the computer’s processor speed and your Internet speed. After this the compile will be faster. Once you have made a firmware you can also speed things up by using more of the processor’s cores. <strong>This can not be done before you build the first firmware as the build will error.</strong> To utilize more of the processor’s core and build using multiple threads you must edit the build file in the root folder. At the start of this text file you will see this.</p>
+							<p><img src="/web/20260617061914im_/images/core1.jpg" alt=""/></p>
+							<p>This forces the build to use only a single core and thread. By changing it to this.</p>
+							<p><img src="/web/20260617061914im_/images/core7.jpg" alt=""/></p>
+							<p>you will allow it to use 6 cores. Change the 7 to a value which is one more than the maximum cores you want to allow the build system to use. On a processor with 3 cores this value would be 4 to utilize all the cores. Doing this will greatly speed up the compile time.</p>
+							<p>If you find the build ends with an error then the first thing to do is to clear all the build files and start again. This is done by running this in the Terminal.</p>
+							<p><strong>make dirclean</strong></p>
+							<p>This removes all of the already compiled files and starts the build system all over again which can solve a lot of build errors that seem to appear for no good reason.</p>
+							<p>There is also a limit to how many extra packages that can be added to a firmware for a 16meg router. If too many packages are added the firmware will exceed the maximum size of the router’s flash and no firmware will be created, causing the build to end in an error.</p>
+
+							<p>Also realize that as you move from the 19.07 build system to the Master/Main build systems the Linux kernel used by OpenWrt increases in size by about 1meg per version. This makes the firmware from the newer versions bigger and, eventually, they get too big for the available flash memory.</p>
+
+							<p>In newer versions the amount of free flash memory required for the firmware to run also increases. In 19.07 about 100meg of free flash was the minimum needed for the firmware to run correctly while in Master/Main it is about 250meg. This affects the number and size of any extra packages you may wish to add to a 16meg router.</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/web/20260617061914js_/assets/js/jquery.min.js"></script>
+			<script src="/web/20260617061914js_/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/web/20260617061914js_/assets/js/skel.min.js"></script>
+			<script src="/web/20260617061914js_/assets/js/util.js"></script>
+			<script src="/web/20260617061914js_/assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 06:19:14 Jun 17, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:25:52 Oct 27, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  capture_cache.get: 0.699
+  load_resource: 185.377
+  PetaboxLoader3.resolve: 107.194
+  PetaboxLoader3.datanode: 62.031
+-->
