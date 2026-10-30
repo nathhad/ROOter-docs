@@ -21,7 +21,7 @@
 		<title>ROOter by Of Modems and Men</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" href="/web/20260606014241cs_/http://www.ofmodemsandmen.com/assets/css/main.css"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
 	</head>
 	<body class="subpage">
 
@@ -72,11 +72,11 @@
                              <p>The one thing that all bootloader running TFTP have in common is they don't run a DHCP server. This means they will not give your computer an IP Address so you will be unable to access the router until you set your computer to have a Static IP Address. Let's look at how to do that on Windows.</p>
                              <p>First you need to know what IP Address to use for the computer. Each bootloader has a specific IP Address for the TFTP server so you must set your computer's IP Address to this. This address must be provided with the specific flashing instructions.</p>
                              <p>Press the <strong>Windows key + I</strong> combination. In the ensuing dialog box select the <strong>Network and Internet</strong> tile.</p>
-                              <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static0.jpg" alt=""/></p>
+                              <p><img src="images/recovery/static0.jpg" alt=""/></p>
                               <p>In the following <strong>Status</strong> dialog click on the <strong>Properties</strong> button.</p>
-                              <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static1.jpg" alt=""/></p>
+                              <p><img src="images/recovery/static1.jpg" alt=""/></p>
                               <p>In the next dialog scroll down to the <strong>IP Settings</strong> section and click on the <strong>Edit</strong> button.</p>
-                              <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static2.jpg" alt=""/></p>
+                              <p><img src="images/recovery/static2.jpg" alt=""/></p>
                               <p>The <strong>Edit IP settings</strong> dialog will appear. Do the following.</p>
                               <div class="10u 12u$(small)">
                             	<ul>
@@ -86,24 +86,24 @@
                                     <li> Set the Subnet Prefix length to 24.</li>
                                 </ul>
                              </div>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static3.jpg" alt=""/></p>
+                             <p><img src="images/recovery/static3.jpg" alt=""/></p>
                              <p>Click on the <strong>Save</strong> button. Your computer now has a static IP Address of 192.168.1.2.</p>
                              <p>To set your computer back to Automatic IP Address simply select the <strong>Automatic</strong> mode in the <strong>Edit IP settings</strong> dialog. You will want to do this when you have completed flashing the router.</p>
                              <h4>Computer Firewall</h4>
                              <p>The Windows Firewall can sometimes block a TFTP transfer so it is best to turn it off during this procedure. You will want to turn it on again after flashing the router.</p>
                              <p>Click on the <strong>Start</strong> button and enter <strong>defender</strong> into the search box. Select the <strong>Windows Defender Firewall Settings</strong> tile.</p>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/firewall1.jpg" alt=""/></p>
+                             <p><img src="images/recovery/firewall1.jpg" alt=""/></p>
                              <p>In the <strong>Firewall</strong> dialog select <strong>Turn Windows Defender Firewall on or off</strong>.</p>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/firewall2.jpg" alt=""/></p>
+                             <p><img src="images/recovery/firewall2.jpg" alt=""/></p>
                              <p>Select <strong>Turn Off Windows Defender Firewall</strong> for both <strong>Private</strong> and <strong>Public Networks</strong>. Click on the OK button.</p>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/firewall3.jpg" alt=""/></p>
+                             <p><img src="images/recovery/firewall3.jpg" alt=""/></p>
                              <p>The Firewall is now disabled. Make sure you enable it again once you have flashed the router.</p>
                              
                              <h4>TFTP Server</h4>
                              <p>Since the router is asking for a firmware file you must have a TFTP server running on the computer. There are many different TFTP servers for Windows but we will look at two that have been used successfully on a number of routers. These are the <a href="download/tftpd32.zip" class="button alt icon fa-download">TFTPD32 program</a> and the <a href="download/pxesrv.zip" class="button alt icon fa-download">Tiny-PXE Server program</a>.</p>
                              <p><strong>TFTPD32</strong></p>
                              <p>Unzip the archive into a folder. It does not need installation to use. Copy your firmware file into this folder as well. Since each bootloader has different tftp client and server IP Addresses and a dfferent name for the firmware file we must tell TFTPD32 what these values are. We do this by editing the <strong>tftpd32.ini</strong> file. Three lines need to be changed to match the values desired by the bootloader.</p>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/tftp1.jpg" alt=""/></p>
+                             <p><img src="images/recovery/tftp1.jpg" alt=""/></p>
                              <div class="10u 12u$(small)">
                             	<ul>
                                 	<li><strong>IP_Pool</strong> - the IP Address of the TFTP Client.</li>
@@ -116,14 +116,14 @@
                              <p>But a bootloader that has it's TFTP session started manually via the reset button may have different requirements. It may only say the <strong>TFTP client is 192.168.1.1</strong> and not specify  the rest. The TFTP server IP can be anything in the same subnet as the TFTP client and the firmware file could be any name as long as the server knew which file was to be sent to which IP Address. In this case the router broadcasts over the Ethernet that the client at <strong>192.168.1.1</strong> wants any file from any server on the network. By editing the <strong>tftpd32.ini</strong> file we can tell the TFTP server which file is to be sent to the specific client.</p>
                              <p><strong>Tiny-PXE Server</strong></p>
                              <p>Unzip the archive into a folder. It does not need installation to use. Copy your firmware file into this folder as well and rename it <strong>firmware.bin</strong>. Tiny-PXE must be set up to work properly as a TFTP server. We do this by editing the <strong>config.ini</strong> file. Four lines need to be changed to achieve this. These are already set to the default values.</p>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/pxe1.jpg" alt=""/></p>
+                             <p><img src="images/recovery/pxe1.jpg" alt=""/></p>
                              <p>The rest of the changes to Tiny-PXE are done when we run the program.</p>
 
                              <h4>Starting the TFTP Server</h4>
                              <p>With the computer set with Static IP, disabled Firewall and a TFTP server, we are ready to flash the router. Unplug the power from the router and connect one of it's LAN ports to the computer using an Ethernet cable. If you are using tftpd32 then start the TFTP server running by double clicking on the <strong>tftpd32.exe</strong> file. You will see the TFTP server running.</p>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/tftp2.jpg" alt=""/></p>
+                             <p><img src="images/recovery/tftp2.jpg" alt=""/></p>
                              <p>If you are using Tiny-PXE then start the TFTP server by double clicking on the <strong>pxe32.exe</strong> file. You will see the Tiny-PXE dialog appear. This needs to have some changes in order to use it.</p>
-                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/pxe2.jpg" alt=""/></p>
+                             <p><img src="images/recovery/pxe2.jpg" alt=""/></p>
                              <p>The important things here are the <strong>IP Pool start / size</strong> and the <strong>Filename if userclass=gPXE or iPXE</strong>.</p> <p>The <strong>IP Pool</strong> defines which TFTP client IP the server will accept. You set this to an IP that is one less than the TFTP client IP and set the size to 1. For example, if the TFTP client is <strong>192.168.1.1</strong> then set the IP Pool to <strong>192.168.1.0</strong> and the size to <strong>1</strong>. If the TFTP client IP is <strong>192.168.100.10</strong> then set the IP Pool to <strong>192.168.1.9</strong> and the size to <strong>1</strong>.</p>
                              <p>The <strong>Filename if userclass=gPXE or iPXE</strong> box must be unchecked. Make sure the <strong>Next Server</strong> is the IP Address of your computer.</p>
                              <p>Tiny-PXE is started by clicking on the <strong>Online</strong> button. This is important as, unlike tftpd32, Tiny-PXE doesn't start the TFTP server automatically when it is executed.</p>
@@ -155,11 +155,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/jquery.min.js"></script>
-			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
-			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/skel.min.js"></script>
-			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/util.js"></script>
-			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html><!--

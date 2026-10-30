@@ -21,7 +21,7 @@
 		<title>ROOter by Of Modems and Men</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" href="/web/20260508111102cs_/http://www.ofmodemsandmen.com/assets/css/main.css"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
 	</head>
 	<body class="subpage">
 
@@ -74,9 +74,9 @@
                               <p>Tests on the E3276, a known power hog, show that it requires about 200ma during most of the connection process but has a spike of 2000-3000ma at one point that can cause problems. It requires about 100ma after connection at idle. A Sierra 320U uses 150ma during connection with a spike of 220ma at one point. After connection it uses 100ma or less at idle. A ZTE MF668 required about 300ma during the entire connection process and the same afterword at idle. It required 400ma when data was transmitted.</p>
 <p>These tests show that there is a need for a suplus of power during the connection process and the lack of it may cause problems.</p>
 <p>We can also get modem power requirements from the spec sheets published by the manufacturers. Sierra has put information about power usage for the EM7455 modem into its spec sheet and it shows typical power requirements at varying levels of connection.</p>
-<p><img src="/web/20260508111102im_/http://www.ofmodemsandmen.com/images/power/em7455pwr1.jpg" width="832" height="622"></p>
+<p><img src="images/power/em7455pwr1.jpg" width="832" height="622"></p>
 <p>The TX Power is the amount of signal needed for the modem to make a connection to the tower and it increases with a poorer connection. Smaller numbers are a better connection. Bandwidth and speed also play a part in the modem's power requirements.</p>
-<p><img src="/web/20260508111102im_/http://www.ofmodemsandmen.com/images/power/em7455pwr2.jpg" width="1048" height="510"></p>
+<p><img src="images/power/em7455pwr2.jpg" width="1048" height="510"></p>
 <p>Inrush Current is the momentary amount of power needed when the modem is first powered up. Even the USB port requires some power. It appears that the modem can use a maximum of 1.5 amps of power in a worst case scenario. That is quite a load for a USB port to provide if you are using this modem in a M.2 to USB adapter.</p>
 <p>So, how do we fix this problem? There are several ways of doing it.</p>
                               <h3>Replace the Power Pack</h3>
@@ -87,22 +87,22 @@
                               <h3>Change the Wifi Transmit Power</h3>
                               <p>Another method is to lower the power to the router's wifi. A wifi running at full power can consume a great deal of electrical power. If you don't need the wifi then disable it and save the extra power consumption. This may make a marginal situation stable again.</p>
                               <p>You can also reduce the transmit power level of the wifi radio and save some power consumption there. This will work if you can still connect to the wifi at the lower power level. To do this, go to the <strong>Network</strong> menu and the <em><strong>Wifi</strong></em> submenu. Click on the <em>Edit</em> button.</p>
-                              <p><img src="/web/20260508111102im_/http://www.ofmodemsandmen.com/images/power/wifi1.jpg" alt="" width="600" height="395"/></p>
+                              <p><img src="images/power/wifi1.jpg" alt="" width="600" height="395"/></p>
                               <p>Change the <em>Transmit Power</em> to a lower level, click on <em>Save &amp; Apply</em> in the lower right corner and wait for the changes to take place.</p>
                               <h3>Use a Y-Cable</h3>
                               <p>If your router is near a computer or other device with a USB port it is possible to take power from that device and use it to supply power to the modem by the use of a Y-cable.</p>
-                              <p><img src="/web/20260508111102im_/http://www.ofmodemsandmen.com/images/power/ycable.jpg" alt="" width="500" height="262"/></p>
+                              <p><img src="images/power/ycable.jpg" alt="" width="500" height="262"/></p>
                               <p>The modem plugs into the single end of the cable and one of the other plugs goes to the router and the other to the device supplying power. The device supplying power can be a power adapter with a USB port on it, used for changing phones and the like.</p>
                               <p>This will work if the device can supply enough power for the modem under peak load. Many devices may not be able to do this if the power required exceeds 500ma.</p>
                               <h3><strong>Use a USB Hub</strong></h3>
                               <p>The use of a powered USB Hub has been shown to solve the power consumption problem in almost every case. In fact, some have noted better signal strength and performance due to the modem receiving enough power to operate correctly.</p>
-                              <p><img src="/web/20260508111102im_/http://www.ofmodemsandmen.com/images/power/tomtop.jpg" alt="" width="297" height="404"/></p>
+                              <p><img src="images/power/tomtop.jpg" alt="" width="297" height="404"/></p>
                               <p>Be very sure that the USB Hub power supply is large enough to supply the required modem power. Some lower end Hubs have power supplies that, despite their rating, don't actually supply the needed power. A true 1000ma power pack is needed at a minimum.</p>
                               <p>Simply plug the Hub into the router, connect it to its power supply and plug in the modem. ROOter firmware supports the use of powered hubs and the modem will connect without a problem.</p>
                               <h3>RF Interference</h3>
                               <p>Another issue with some modem and router combinations is RF Interference. Signals from the router can interfere with the operation of the modem and cause connection problems.</p>
                               <p>The solution to this is to move the modem a short distance away from the router by the use of a USB Extension cable.</p>
-                              <p><img src="/web/20260508111102im_/http://www.ofmodemsandmen.com/images/power/usbext.jpg" alt="" width="259" height="194"/></p>
+                              <p><img src="images/power/usbext.jpg" alt="" width="259" height="194"/></p>
                               <p>Some modems come with these cables already.</p>
                               <p>Be sure to get a good quality cable, as cheap cables can introduce more problems, and try to get one with  a ferrite bead (the large lump) in the cable. These do the best job of removing RF interference.</p>
 
@@ -119,11 +119,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/web/20260508111102js_/http://www.ofmodemsandmen.com/assets/js/jquery.min.js"></script>
-			<script src="/web/20260508111102js_/http://www.ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
-			<script src="/web/20260508111102js_/http://www.ofmodemsandmen.com/assets/js/skel.min.js"></script>
-			<script src="/web/20260508111102js_/http://www.ofmodemsandmen.com/assets/js/util.js"></script>
-			<script src="/web/20260508111102js_/http://www.ofmodemsandmen.com/assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html><!--

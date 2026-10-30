@@ -21,7 +21,7 @@
 		<title>ROOter by Of Modems and Men</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" href="/web/20260508121425cs_/http://www.ofmodemsandmen.com/assets/css/main.css"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
 	</head>
 	<body class="subpage">
 
@@ -91,7 +91,7 @@
                              </div>
                              <p>And this is how a router's firmware is updated using the current firmware's GUI. The file containing the new firmware is upload by the GUI and placed into some area of free RAM. That is then copied to the proper location in flash memory and the router is rebooted. This also puts a limit on the size of the new firmware as it must fit into free RAM space. If a router's new firmware file is 16 meg in size then there must be at least 16 meg of free RAM available or the process will fail. Routers with only 64 meg of RAM may not have that much free RAM if the firmware program is already using 50 meg of RAM.</p>
                              <p>Now that we have looked at the way that a router boots up and how the firmware can be changed we will look at the way that flash memory is laid out.</p>
-                             <p><img src="/web/20260508121425im_/http://www.ofmodemsandmen.com/images/router/router1.jpg" alt=""/></p>
+                             <p><img src="images/router/router1.jpg" alt=""/></p>
                              <p>Not all routers use this flash layout but they are all very much the same. We have the following sections or <strong>partitions</strong> in flash memory.</p>
                              <div class="10u 12u$(small)">
                             	<ul>
@@ -137,7 +137,7 @@
                              <p>You are probably wonderng why all these different methods exist that use the bootloader to flash the router. Can't you just use the normal GUI and flash it from there? The answer is : Sometimes.</p>
                              <p>When you want to flash a router from the factory firmware to ROOter, in many cases the factory firmware will not allow it. Every firmware has checks built into it to stop an incorrect firmware from being used. These involve things like firmware name, checksums and special data in the firmware. In some cases the firmware created by ROOter has an image that is specially designed to meet all of these requirements so you can use that to flash from factory to ROOter. But many routers don't have this image so other methods have to be used to flash them to ROOter. This is where the bootloader methods come into play.</p>
                              <p>This is a flowchart that shows the steps to determine which method needs to be used to flash a router.</p>
-                             <p><img src="/web/20260508121425im_/http://www.ofmodemsandmen.com/images/router/router2.jpg" alt=""/></p>
+                             <p><img src="images/router/router2.jpg" alt=""/></p>
                              <p>We have gone from looking at how the router boots up and how the flash memory is laid out to looking at the flashing methods that are used by the various bootloaders. Hopefully this increases the understanding of what is being done to a router when flashing it to ROOter.</p>
                              
 						</div>
@@ -153,11 +153,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/web/20260508121425js_/http://www.ofmodemsandmen.com/assets/js/jquery.min.js"></script>
-			<script src="/web/20260508121425js_/http://www.ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
-			<script src="/web/20260508121425js_/http://www.ofmodemsandmen.com/assets/js/skel.min.js"></script>
-			<script src="/web/20260508121425js_/http://www.ofmodemsandmen.com/assets/js/util.js"></script>
-			<script src="/web/20260508121425js_/http://www.ofmodemsandmen.com/assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html><!--
