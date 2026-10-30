@@ -150,14 +150,14 @@
 							<p>If you wish to customize the firmware by adding extra packages you must edit the router’s configuration file. If you are just making a standard ROOter firmware then you can skip this step. If you are customizing the firmware then to find the name of the configuration file run this in the Terminal.</p>
 							<p><strong>./build</strong></p>
 							<p>This will give you a list of the configuration files that this build system supports. For the Main build system it will like this.</p>
-							<p><img src="/web/20260617061914im_/images/builds.jpg" alt=""/></p>
+							<p><img src="images/builds.jpg" alt=""/></p>
 							<p>The names of the configuration file will, in most cases, indicate which router they are for. You can also look in the <strong>/configfiles/template</strong> folder and see the name of the files there. They all start with “.config_” and what follows is the name you want.</p>
 							<p>To customize the configuration file you enter this in the Terminal.</p>
 							<p><strong>./menu config_name</strong></p>
 							<p>where <strong>config_name</strong> is one of the above names without the “.config_” prefix. The name should be in lower case like</p>
 							<p><strong>./menu x3000</strong></p>
 							<p>This will open the standard OpenWrt configuration window in the Terminal so you can add new packages to the firmware.</p>
-							<p><img src="/web/20260617061914im_/images/openc.jpg" alt=""/></p>
+							<p><img src="images/openc.jpg" alt=""/></p>
 							<p>When you exit, if you chose to save the changes, the configuration file in <strong>/configfiles/template</strong> will be updated.</p>
 
 							<p>The next step is to compile the firmware using the router’s configuration file. This is done by running this in the Terminal.</p>
@@ -167,9 +167,9 @@
 							<p>This will compile the firmware and rename the resulting files into the ROOter format, then place a Zipped archive of them into the <strong>/images</strong> folder ready for your use.</p>
 
 							<p>The first time you build a firmware with a new build system it needs to download all the packages needed for the process. This is a large number of files, 4GB for the Main build system, so it takes a while to finish running. The speed depends a lot on the computer’s processor speed and your Internet speed. After this the compile will be faster. Once you have made a firmware you can also speed things up by using more of the processor’s cores. <strong>This can not be done before you build the first firmware as the build will error.</strong> To utilize more of the processor’s core and build using multiple threads you must edit the build file in the root folder. At the start of this text file you will see this.</p>
-							<p><img src="/web/20260617061914im_/images/core1.jpg" alt=""/></p>
+							<p><img src="images/core1.jpg" alt=""/></p>
 							<p>This forces the build to use only a single core and thread. By changing it to this.</p>
-							<p><img src="/web/20260617061914im_/images/core7.jpg" alt=""/></p>
+							<p><img src="images/core7.jpg" alt=""/></p>
 							<p>you will allow it to use 6 cores. Change the 7 to a value which is one more than the maximum cores you want to allow the build system to use. On a processor with 3 cores this value would be 4 to utilize all the cores. Doing this will greatly speed up the compile time.</p>
 							<p>If you find the build ends with an error then the first thing to do is to clear all the build files and start again. This is done by running this in the Terminal.</p>
 							<p><strong>make dirclean</strong></p>
@@ -194,11 +194,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/web/20260617061914js_/assets/js/jquery.min.js"></script>
-			<script src="/web/20260617061914js_/assets/js/jquery.scrollex.min.js"></script>
-			<script src="/web/20260617061914js_/assets/js/skel.min.js"></script>
-			<script src="/web/20260617061914js_/assets/js/util.js"></script>
-			<script src="/web/20260617061914js_/assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html><!--
