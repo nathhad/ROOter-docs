@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=3grhEDQT" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ofmodemsandmen.com/protocol.html","20260606021416","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1780712056");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="/web/20260606021416cs_/http://www.ofmodemsandmen.com/assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>Modem Protocols</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>Protocol wars</p>
+								<h2>Which Protocol is Better?</h2>
+							</header>
+							<p>An ongoing debate is taking place between modem users as to which protocol is better. Should we use MBIM because it is faster or QMI because I see lower pings? Is NCM faster than ECM? Is there even a difference?</p>
+							<p>Ask any modem user and they have their own opinion on the subject. Since there is a quite a bit of confusion about this this explaination hopes to clear up some of that and help settle the debate.</p>
+                          <h3>What are Modem protocols?</h3>
+							<p>There are a number of protocols used by modems These include</p>
+							<table width="24%" border="0">
+                              <tr>
+                                <td width="6%">PPP</td>
+                                <td width="8%">Direct-IP</td>
+                                <td width="86%">NCM</td>
+                              </tr>
+                              <tr>
+                                <td>ECM</td>
+                                <td>RNDIS</td>
+                                <td>MBIM</td>
+                              </tr>
+                              <tr>
+                                <td>QMI</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </table>
+
+							<p>Which brings up the question, what is a protocol and what does it do?</p>
+							<p>All modems use the USB bus to transfer data back and forth from router to modem and modem to router. Even modems that use the PCie or M.2 interface just use the USB portion of those interfaces. USB is a serial interface so there is the possibility that you may lose some bits from the data stream, which would corrupt the data being passed. Protocols are used to stop this from happening.</p>
+							<p>A modem protocol is a method of packaging up the data being sent so when it is decoded at the other end missing data bits can be recognized and recovered. This is done by adding extra data to each chunk of data sent so the recieiver can see if the data is corrupted and, in some cases, fix the corruption.</p>
+							<p>There are many ways of doing this with PPP being the most famous. It was invented in the days of dialup modems that sent data over the telephone lines. This is a very noisy environment so data loss was frequent. To combat this the data being sent was broken up into small chunks called packets and extra data was added to it that could tell if something was wrong with the data chunk. Enough extra data was added so the receiver could actually recover the bad data. This worked well with the slow speeds of the time.</p>
+							<p>Since that time modems have become much, much faster and use radio to communicate with cell towers. The important thing to know about modem protocols is that they are<strong> used to send data between router and modem</strong>. In no way do they have any effect on the modem communicating with the tower. This is where many people get confused. The methods used to send data to and from the tower are totally under control of the modem and a user has no way to alter that. The only thing we can do is excert some control over the data being sent over the USB.</p>
+							<p>Thus we solve one area of misunderstanding. A modem protocol has no effect on the data being sent between the modem and the tower. If that signal is poor then speeds will be lower and no amount of fiddling with your modem protocol will fix that. End of story.</p>
+							<p>What we do have control over using modem protocols is the <strong>data stream between router and modem over USB</strong>. This is a relatively clean environment for data to pass over so there doesn't need to be as much extra data added to each packet as errors are reasonably infrequent. This is where the choice of modem protocol comes in. Sort of.</p>
+							<p>We want to be able to send our data as fast as possible over the USB bus to take advantage of higher speed Internet. A USB 2.0 bus, in the real world, can manage about 300Mbps. This means that it it could handle, again in an ideal situation, an Internet download speed of about 300Mbps. Because the various modem protocols add extra data to each data packet the amount of real data being sent would be less than 300Mbps. A more efficent protocol would be able to pass more data and come closer to the ideal maximum.</p>
+							<p>Notice that we are talking about Internet speeds of 300Mbps. Speeds this high can be reached with modems using multiple CA but are not normally seen. If your download speed is 50Mbps then the efficiency of the protocol becomes less of a concern. And there is another area that affects the maximum speed a protocol can deliver. Decoding.</p>
+							<p>Remember that extra data is added to each packet and this data has to calculated from the data being sent by an algorithm. The more complex the calculation, the more computing power is needed from the router. There is going to be an upper limit to how fast the router can do these calculation and get the data sent. Does this have an affect in the real world? Again, sort of.</p>
+							<p>Remember that the PPP protocol was invented to send over the incredibly noisy telephone lines. To achieve this reliably they had to include a lot of extra data to each packet and it required lots of calculation to figure out. Remember that when the router is talking to the modem it is encoding the data to the modem and decoding the data from the modem at the same time. This requires a powerful processor when speeds become higher. At the beginning of the use of Cellular modems the routers were smal and slow. This had an effect on data speeds that used the PPP protocol. At the time it was known that using PPP you couldn't exceed 30Mbps speeds. It just wasn't possible. And all the modems used PPP in those days. The reason was the incredible overhead that PPP had when sending a data packet. Since the USB bus had no need for all that error correction other protocols were invented.</p>
+							<p>Interestingly, as routers have become more powerful a modem using PPP can now achieve speeds of 50Mbps or more. The routers can process more data quicker now so PPP speeds have increased. However, PPP just didn't cut it in an evolving world and soon newer protocols with less overhead began popping up. Of course, the industry couldn't get together and settle on one protocol. Never happen. Instead different groups and companies promoted their own protocols.</p>
+						  <p>Sierra went with Direct-IP which it used until it started making PCie modems, Huawei had the NCM protocol and Microsoft stated that Windows would only support MBIM. The one thing all these protocols had in common were they were designed for the USB bus and were high speed. Many modems supported multiple protocols and you could switch between them at will.</p>
+                             <h3>Which Protocol is Best?</h3>
+                             <p>Now we get to the heart of the matter, which one is best. First let's review what we now know about modem protocols.</p>
+                             <p>Modem protocols are used to<strong> transfer data between the router and the modem over the USB bus</strong>. They have no effect on the communications between the modem and the tower. Protocols are designed to limit the errors that may crop up in the data being transferred due to noise on the USB bus. All protocols except for PPP were designed with high speed in mind while sending data over the very clean USB bus.</p>
+                             <p>And that is it.<strong> Send data between the router and modem with as few errors as possible.</strong></p>
+                             <p>So which is the fastest? You can't tell the difference. All other than PPP are faster than the USB bus and can handle data transfers higher than current Internet speeds available over Cellular. They may use different methods of achieving this but from the outside they are all the same.</p>
+                             <p>Which has a lower ping? Same thing. Your ping is affected more by things between the modem and the server than it is between the router and the modem. The different protocol's methods may introduce a slight difference in ping times but you'd be hard pressed to even see it. Delays on the Internet and through your Provider will make up 99.9% of ping times.</p>
+                             <p>The only area that may make one protocol better than another is manufacturer implementation. Since Windows demands the MBIM protocol the manufacturers make sure that the code inside the modem is working correctly and as expected. Other protocols may not receive the same love and could have bugs that cause slow downs.</p>
+                             <p>And the summary.</p>
+                             <p><strong>A different protocol will not make your Internet speeds any faster or your ping times any lower.</strong> Manufacturers may have better code for MBIM since it caters to the Windows market but that is not always the case. Chose your protocol to fit whatever works best for the modem. Some modems connect better using MBIM, some with QMI.</p>
+                             <p>It is Ford vs Chevy in the world of modems. Or Linux vs Windows.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/web/20260606021416js_/http://www.ofmodemsandmen.com/assets/js/jquery.min.js"></script>
+			<script src="/web/20260606021416js_/http://www.ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/web/20260606021416js_/http://www.ofmodemsandmen.com/assets/js/skel.min.js"></script>
+			<script src="/web/20260606021416js_/http://www.ofmodemsandmen.com/assets/js/util.js"></script>
+			<script src="/web/20260606021416js_/http://www.ofmodemsandmen.com/assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 02:14:16 Jun 06, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 04:10:21 Oct 30, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.507
+  exclusion.robots: 0.055
+  exclusion.robots.policy: 0.046
+  esindex: 0.006
+  cdx.remote: 23.971
+  LoadShardBlock: 1047.889 (3)
+  PetaboxLoader3.datanode: 1098.212 (4)
+  PetaboxLoader3.resolve: 151.06 (2)
+  load_resource: 215.783
+-->

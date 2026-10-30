@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=3grhEDQT" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ofmodemsandmen.com/tftp.html","20260606014241","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1780710161");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="/web/20260606014241cs_/http://www.ofmodemsandmen.com/assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>TFTP Flashing</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>TFTP Flashing</p>
+								<h2>Flashing the Router Using TFTP and a Computer</h2>
+							</header>
+							<p>On many routers you can not flash the ROOter firmware using the factory GUI. The factory firmware will not accept the ROOter firmware as vaild so you have to find other ways to do the flashing. One of these is using TFTP. Here we will look at using TFTP on a computer to flash the router.</p>
+                            <p>As we talked about on the <a href="router101.html"><span>All About Routers</span></a> page, many routers must use TFTP to flash or have the option to use TFTP to flash. The Trivial File Transfer Protocol or TFTP is a method of transfering files from one device to another using Ethernet. It uses a client and server setup where the client device asks for a file from the server device and receives it via the Ethernet connection.</p>
+                            <p>As explained on the <a href="router101.html"><span>All About Routers</span></a> page, there are two slighty different ways a router uses TFTP to flash the router but the procedure is exactly the same for both. The only difference is one checks for a TFTP transfer automatically while the other requires the reset button to be held down for a certain amount of time. We will look at what is needed to allow flashing a router using TFTP.</p>
+                            <h4>Computer Static IP Address</h4>
+                             <p>The one thing that all bootloader running TFTP have in common is they don't run a DHCP server. This means they will not give your computer an IP Address so you will be unable to access the router until you set your computer to have a Static IP Address. Let's look at how to do that on Windows.</p>
+                             <p>First you need to know what IP Address to use for the computer. Each bootloader has a specific IP Address for the TFTP server so you must set your computer's IP Address to this. This address must be provided with the specific flashing instructions.</p>
+                             <p>Press the <strong>Windows key + I</strong> combination. In the ensuing dialog box select the <strong>Network and Internet</strong> tile.</p>
+                              <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static0.jpg" alt=""/></p>
+                              <p>In the following <strong>Status</strong> dialog click on the <strong>Properties</strong> button.</p>
+                              <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static1.jpg" alt=""/></p>
+                              <p>In the next dialog scroll down to the <strong>IP Settings</strong> section and click on the <strong>Edit</strong> button.</p>
+                              <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static2.jpg" alt=""/></p>
+                              <p>The <strong>Edit IP settings</strong> dialog will appear. Do the following.</p>
+                              <div class="10u 12u$(small)">
+                            	<ul>
+                                	<li> Set the mode to Manual.</li>
+                                	<li>Make sure IPv4 is On.</li>
+                                    <li>Set the IP Address to 192.168.1.2 or whatever IP Address is required.</li>
+                                    <li> Set the Subnet Prefix length to 24.</li>
+                                </ul>
+                             </div>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/static3.jpg" alt=""/></p>
+                             <p>Click on the <strong>Save</strong> button. Your computer now has a static IP Address of 192.168.1.2.</p>
+                             <p>To set your computer back to Automatic IP Address simply select the <strong>Automatic</strong> mode in the <strong>Edit IP settings</strong> dialog. You will want to do this when you have completed flashing the router.</p>
+                             <h4>Computer Firewall</h4>
+                             <p>The Windows Firewall can sometimes block a TFTP transfer so it is best to turn it off during this procedure. You will want to turn it on again after flashing the router.</p>
+                             <p>Click on the <strong>Start</strong> button and enter <strong>defender</strong> into the search box. Select the <strong>Windows Defender Firewall Settings</strong> tile.</p>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/firewall1.jpg" alt=""/></p>
+                             <p>In the <strong>Firewall</strong> dialog select <strong>Turn Windows Defender Firewall on or off</strong>.</p>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/firewall2.jpg" alt=""/></p>
+                             <p>Select <strong>Turn Off Windows Defender Firewall</strong> for both <strong>Private</strong> and <strong>Public Networks</strong>. Click on the OK button.</p>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/firewall3.jpg" alt=""/></p>
+                             <p>The Firewall is now disabled. Make sure you enable it again once you have flashed the router.</p>
+                             
+                             <h4>TFTP Server</h4>
+                             <p>Since the router is asking for a firmware file you must have a TFTP server running on the computer. There are many different TFTP servers for Windows but we will look at two that have been used successfully on a number of routers. These are the <a href="download/tftpd32.zip" class="button alt icon fa-download">TFTPD32 program</a> and the <a href="download/pxesrv.zip" class="button alt icon fa-download">Tiny-PXE Server program</a>.</p>
+                             <p><strong>TFTPD32</strong></p>
+                             <p>Unzip the archive into a folder. It does not need installation to use. Copy your firmware file into this folder as well. Since each bootloader has different tftp client and server IP Addresses and a dfferent name for the firmware file we must tell TFTPD32 what these values are. We do this by editing the <strong>tftpd32.ini</strong> file. Three lines need to be changed to match the values desired by the bootloader.</p>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/tftp1.jpg" alt=""/></p>
+                             <div class="10u 12u$(small)">
+                            	<ul>
+                                	<li><strong>IP_Pool</strong> - the IP Address of the TFTP Client.</li>
+                                	<li><strong>BootFile</strong> - the name of the fileware file to be used.</li>
+                                    <li><strong>LocalIP</strong> - the IP Address of the TFTP server (the computer's Static IP Address).</li>
+                                </ul>
+                             </div>
+                             <p>A note about these values. Each bootloader will have different values for these and a ot depends on which type of TFTP flashing is being done.</p>
+                             <p> For example, a router that is automatically looking for a TFTP server when it first boots up may say the <strong>TFTP client is 192.168.88.1</strong>, the <strong>TFTP server must be 192.168.88.100</strong> and the firmware file must be named <strong>firmware.bin</strong>. In this case you must rename your firmware file match the desired name. In this example the router broadcasts over the Ethernet that it wants <strong>firmware.bin</strong> from the server at <strong>192.168.88.100</strong> and it is to be sent to the client at <strong>192.168.88</strong>.</p>
+                             <p>But a bootloader that has it's TFTP session started manually via the reset button may have different requirements. It may only say the <strong>TFTP client is 192.168.1.1</strong> and not specify  the rest. The TFTP server IP can be anything in the same subnet as the TFTP client and the firmware file could be any name as long as the server knew which file was to be sent to which IP Address. In this case the router broadcasts over the Ethernet that the client at <strong>192.168.1.1</strong> wants any file from any server on the network. By editing the <strong>tftpd32.ini</strong> file we can tell the TFTP server which file is to be sent to the specific client.</p>
+                             <p><strong>Tiny-PXE Server</strong></p>
+                             <p>Unzip the archive into a folder. It does not need installation to use. Copy your firmware file into this folder as well and rename it <strong>firmware.bin</strong>. Tiny-PXE must be set up to work properly as a TFTP server. We do this by editing the <strong>config.ini</strong> file. Four lines need to be changed to achieve this. These are already set to the default values.</p>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/pxe1.jpg" alt=""/></p>
+                             <p>The rest of the changes to Tiny-PXE are done when we run the program.</p>
+
+                             <h4>Starting the TFTP Server</h4>
+                             <p>With the computer set with Static IP, disabled Firewall and a TFTP server, we are ready to flash the router. Unplug the power from the router and connect one of it's LAN ports to the computer using an Ethernet cable. If you are using tftpd32 then start the TFTP server running by double clicking on the <strong>tftpd32.exe</strong> file. You will see the TFTP server running.</p>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/tftp2.jpg" alt=""/></p>
+                             <p>If you are using Tiny-PXE then start the TFTP server by double clicking on the <strong>pxe32.exe</strong> file. You will see the Tiny-PXE dialog appear. This needs to have some changes in order to use it.</p>
+                             <p><img src="/web/20260606014241im_/http://www.ofmodemsandmen.com/images/recovery/pxe2.jpg" alt=""/></p>
+                             <p>The important things here are the <strong>IP Pool start / size</strong> and the <strong>Filename if userclass=gPXE or iPXE</strong>.</p> <p>The <strong>IP Pool</strong> defines which TFTP client IP the server will accept. You set this to an IP that is one less than the TFTP client IP and set the size to 1. For example, if the TFTP client is <strong>192.168.1.1</strong> then set the IP Pool to <strong>192.168.1.0</strong> and the size to <strong>1</strong>. If the TFTP client IP is <strong>192.168.100.10</strong> then set the IP Pool to <strong>192.168.1.9</strong> and the size to <strong>1</strong>.</p>
+                             <p>The <strong>Filename if userclass=gPXE or iPXE</strong> box must be unchecked. Make sure the <strong>Next Server</strong> is the IP Address of your computer.</p>
+                             <p>Tiny-PXE is started by clicking on the <strong>Online</strong> button. This is important as, unlike tftpd32, Tiny-PXE doesn't start the TFTP server automatically when it is executed.</p>
+                             <h4>Flashing the Router</h4>
+                             <p>If you are attempting to flash the router using the automatic TFTP file check at the start of boot up then just plug in the router's power. The TFTP server will show when it is uploading the firmware file to the router. When the upload is complete the router will begin to flash itself.</p>
+                             <p>On the other hand, if you are trying to flash using the manual TFTP method you need to hold down the reset button and then plug in the router's power. Continue to hold in the reset button. Depending on the router, you may see the TFTP server uploading the firmware file after a short period, at which point you can release the reset button, or you may be required to release the reset button after the LEDs flash in a certain pattern. In any case, once the TFTP server uploads the firmware file to the router it will be flashed to the new firmware.</p>
+                             <p>Once the firmware file is uploaded you can close the <strong>tftp32</strong> or <strong>Tiny-PXE</strong> program, <strong>enable the Firewall</strong> and set the computer to an <strong>Automatic IP Address</strong>. You may not be able to access the router at it's new IP unless you do this.</p>
+                             
+                             <h4>Notes on TFTP Flashing</h4>
+                              <div class="10u 12u$(small)">
+                            	<ul>
+                                	<li>Mikrotik routers that are flashed using the manual TFTP method generally require you to hold the reset button for about 15 seconds. This is indicated by an LED that will start to flash after 5 seconds, flashs for 5 seconds, goes solid for 5 seconds and then goes out. Release the reset button at this point. You will then see the TFTP server uploading the file to the router.</li>
+                                    <li>Mikrotik routers set <strong>192.168.1.1</strong> as the TFTP client IP Address and require you to edit the <strong>tftpd32.ini</strong> file if using tftp32.</li>
+                                    <li>Asus routers also set the TFTP client's IP Address to <strong>192.168.1.1</strong>. They require you edit the <strong>tftpd32.ini</strong> file,  if using tftp32, to set this IP Address and the name of the firmware file. Hold the reset button until the power LED starts to flash, then release.</li>
+                                </ul>
+                             </div>
+                            
+                            
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/jquery.min.js"></script>
+			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/skel.min.js"></script>
+			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/util.js"></script>
+			<script src="/web/20260606014241js_/http://www.ofmodemsandmen.com/assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 01:42:41 Jun 06, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 04:10:16 Oct 30, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.564
+  exclusion.robots: 0.055
+  exclusion.robots.policy: 0.043
+  esindex: 0.008
+  cdx.remote: 19.288
+  LoadShardBlock: 95.927 (3)
+  PetaboxLoader3.datanode: 98.759 (4)
+  PetaboxLoader3.resolve: 130.711 (2)
+  load_resource: 153.905
+-->
