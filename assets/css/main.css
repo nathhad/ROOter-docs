@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url("font-awesome.min.css");
-//@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"); */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700");
 
 /*
@@ -3780,7 +3779,7 @@
 			}
 
 				#header > a[href="#menu"]:before {
-					content: "";
+					content: "\f0c9";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
 					font-family: FontAwesome;
