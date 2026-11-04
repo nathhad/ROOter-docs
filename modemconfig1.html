@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=3grhEDQT" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://ofmodemsandmen.com/modemconfig1.html","20251213015524","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1765590924");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="/web/20251213015524cs_/http://ofmodemsandmen.com/assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+		</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>Modem Configuration</h2>
+					</header>
+				</div>
+		</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>advanced Tab</p>
+								<h2>Configuring a Modem</h2>
+							</header>
+							<p>The <strong>Advanced Tab</strong> of a profile is used to configure the modem in different ways from the default method. Some are used for debugging connection problems while others are used when you have dual modems.</p>
+							<p><img src="/web/20251213015524im_/http://ofmodemsandmen.com/images/modemconfig/modem6.jpg" alt=""/></p>
+                          	<h4>Force to PPP Protocol</h4>
+                            <p>When this is enabled the modem will not use it's normal protocol, such as MBIM or QMI, when connecting but will use the slower PPP protocol. This is used when debugging certain connection problems with new modems.</p>
+                            <h4>Connection Delay</h4>
+                            <p>This is a delay in the connection process that may be needed by some modems while they are connecting. Seldom used or needed these days.</p>
+                            <h4>No DHCP for QMI Modems</h4>
+                            <p>Setting this to Yes will force QMI modems to not use the modem's DHCP but to get that information elsewhere. This can make some QMI modems connect better.</p>
+                          <h4>Lock Connection to a Provider</h4>
+                            <p>This is used to stop a modem from Roaming while it is choosing a tower and ISP. You must know the Country and Network code of your ISP to use this.</p>
+                            <h4>Custom DNS Server</h4>
+                            <p>You can enter the IP Address for up to 4 DNS Servers that will be used instead of those provided by your ISP when the modem connects.</p>
+                            <h4>Enable Connection Logging</h4>
+                            <p>This will show the response to the AT Commands used during the connection process in the System Log. Used for debugging connection problems.</p>
+                            <h4>Enable Load Balancing at Connection</h4>
+                            <p>By default Load Balancing of the modems is disabled as it is not needed for a single modem. If you are using dual modems then this must be enabled to use Load Balancing with them.</p>
+                            <h4>Enable Custom AT Startup Command at Connection</h4>
+                            <p>This allows executing an AT Command immediately after the modem has connected.</p>
+                            <h4>Custom AT Startup Command</h4>
+                            <p>The AT Command to be executed.</p>
+                            <h4><a name="selection"></a>Modem Interface Selection </h4>
+                          <p>This selection is only used in a Custom Profile and is for the use of dual modems. It should be left as <strong>Auto</strong> when using a single modem. This is used to specify which WAN interface (WAN1 or WAN2) a modem/SIM combination should use when it is detected and connected.</p>
+                            <p>In Auto mode the first modem detected is assigned WAN1 and the second WAN2. When using dual modems this causes a problem because, after rebooting, you can not know which modem will be detected first. Load Balancing requires that you know which modem is using WAN1 and which modem is using WAN2. By specifying which modem/SIM combination will use WAN1 and which one will use WAN2 you can always know which interface is used by which modem.</p>
+                            <p>As always, when making changes to the Advanced Tab click on <em>Save&Apply;</em> to save the changes.</p>
+                            
+                      </div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/web/20251213015524js_/http://ofmodemsandmen.com/assets/js/jquery.min.js"></script>
+			<script src="/web/20251213015524js_/http://ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/web/20251213015524js_/http://ofmodemsandmen.com/assets/js/skel.min.js"></script>
+			<script src="/web/20251213015524js_/http://ofmodemsandmen.com/assets/js/util.js"></script>
+			<script src="/web/20251213015524js_/http://ofmodemsandmen.com/assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 01:55:24 Dec 13, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:27:12 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.689
+  exclusion.robots: 0.088
+  exclusion.robots.policy: 0.074
+  esindex: 0.009
+  cdx.remote: 8.013
+  LoadShardBlock: 77.118 (3)
+  PetaboxLoader3.datanode: 97.126 (4)
+  PetaboxLoader3.resolve: 98.886 (2)
+  load_resource: 171.47
+-->

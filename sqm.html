@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+<html>
+<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=3grhEDQT" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://ofmodemsandmen.com/sqm.html","20201124171922","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1606238362");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+<title>ROOter by Of Modems and Men</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="/web/20201124171922cs_/https://ofmodemsandmen.com/assets/css/main.css"/>
+</head>
+<body class="subpage">
+
+<header id="header">
+<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+<a href="#menu">MENU</a>
+</header>
+
+<nav id="menu">
+<ul class="links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About ROOter</a></li>
+<li><a href="routers.html">Supported Routers</a></li>
+<li><a href="modems.html">Supported Modems</a></li>
+<li><a href="firmware.html">Firmware Downloads</a></li>
+<li><a href="documentation.html">Documentation and Tutorials</a></li>
+<li><a href="other.html">Other Downloads</a></li>
+<li><a href="redirect.html">ROOter Forum</a></li>
+</ul>
+</nav>
+
+<section id="One" class="wrapper style3">
+<div class="inner">
+<header class="align-center">
+<p>Bringing Routers and Modems together in style</p>
+<h2>Smart Queue Management</h2>
+</header>
+</div>
+</section>
+
+<section id="two" class="wrapper style2">
+<div class="inner">
+<div class="box">
+<div class="content">
+<header class="align-center">
+<p>Traffic management</p>
+<h2>Smart Queue Management QOS</h2>
+</header>
+<p>Smart Queue Management or <em>SQM</em> is an integrated network system that performs per-packet/per flow network scheduling, active queue length management (AQM), traffic shaping/rate limiting, and prioritization. It also controls Bufferbloat, the undesirable latency that comes from the router buffering too much data.</p>
+<p>To configure Smart Queue Management, go to the <strong>Network</strong> menu and the <strong>SQM QoS</strong> submenu.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm1.jpg"/></p>
+<p>Use the <strong>Add</strong> button to add a new SQM Instance and the Instance's <strong>Delete</strong> button to remove it.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm2.jpg"/></p>
+<p>There are 3 tabs that allow you to configure the SQM Instance.</p>
+<div class="10u 12u$(small)">
+<ol>
+<li>Basic Settings sets the download and upload speeds of the interface link.</li>
+<li>Queue Discipline selects which queueing discipline to use on the interface link.</li>
+<li>Link Layer Adapation calculates the proper overheads for interface links such as DSL and ADSL.</li>
+</ol>
+</div>
+<p>But before configuring the SQM Instance there is some preparation work that needs to be done first. This includes finding out the ethernet adapter name associated with the interface you want to use and finding the speed of the link.</p>
+<h3>Interface Ethernet Adapter</h3>
+<p>ROOter supports Internet on 4 interfaces that you may want to add SQM to. These are :</p>
+<div class="10u 12u$(small)">
+<ul>
+<li><em><u>WAN</em></u> is wired Internet via the Wan port.</li>
+<li><em><u>WWAN</em></u> is a Wifi Hotspot.</li>
+<li><em><u>WAN1</em></u> is Modem 1.</li>
+<li><em><u>WAN2</em></u> is Modem 2.</li>
+</ul>
+</div>
+<p>To find the ethernet adapter name associated with the <strong>WAN</strong> and the <strong>modems</strong> go to the <strong>Network</strong> menu and the <strong>Interfaces</strong> submenu. The modems must be plugged into the router in order to find their adapter name.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm3.jpg"/></p>
+<p>For the <strong>WWAN</strong> ( Hotspot ) it is more involved. The Wifi Hotspot Manager must be enabled and connected for you to find the adapter name. Go to the <strong>Network</strong> menu and the <strong>Wireless</strong> submenu and click on the Hotspot's <em>Edit</em> button.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm4.jpg"/></p>
+<p>At the top of the ensuing page you will see the adapter name of that Wifi inteface.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm5.jpg"/></p>
+<p>This adapter name is associated with the selected Wifi radio and not specifically to the Hotspot. The correct adapter name for the Hotspot is <strong>wlan0-1</strong>.</p>
+<h3>Link Speed</h3>
+<p>In order to set up SQM correctly on an interface you need to know how fast the download and upload speeds are. Make sure that the interface is the only Internet source active on the router so you can test it's speeds. SQM for this interface must be disabled at this time.</p>
+<p>When your network is relatively quiet, use <a href="https://web.archive.org/web/20201124171922/http://www.dslreports.com/speedtest">DSLReports Speedtest</a> to find these values.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm6.jpg"/></p>
+<p>Select the type of Internet connection you have and click on the appropriate button. Clicking on <em>More</em> will show more selections. Testing of your connection will then take place and you will see the results.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm7.jpg"/></p>
+<p>With the name of the ethernet adapter associated with the interface and the connection speed you are ready to create a SQM Instance for this interface.</p>
+<h3>SQM Instance</h3>
+<p>Each interface can only have a single SQM Instance created for it so you can use the one that is already created or add a new one if that is already used.</p>
+<p>If you are adding SQM to a modem then the modem must be plugged into the router and connected before configuring the instance. If this is for a Hotspot then the Wifi Hotspot Manager must be enabled and connected before configuring. Otherwise, the ethernet adapter name will not appear in the <em>Interface Name</em> dropdown box.</p>
+<p>Start with the <em>Basic Settings</em> tab.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm8.jpg"/></p>
+<div class="10u 12u$(small)">
+<ol>
+<li>Select the name of the ethernet adapter for the interface from the <em>Interface Name</em> dropdown box.</li>
+<li>Set the <em>Download Speed</em> and <em>Upload Speed</em> to about 80-95% of the speeds you obtained from the speed test.</li>
+<li>Check the <em>Enable this SQM Instance</em> box</li>
+</ol>
+</div>
+<p>Then go to the <em>Queue Discipline</em> tab.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm9.jpg"/></p>
+<div class="10u 12u$(small)">
+<ol>
+<li>Change the <em>Queuing Discipline</em> to <strong>cake</strong>.</li>
+<li>Change the <em>Queue Setup Script</em> to <strong>piece_of_cake.qos</strong>.</li>
+</ol>
+</div>
+<p>These are the best settings for an SQM Instance.</p>
+<p>And lastly <em>Link Layer Adaptation</em> tab.</p>
+<p><img src="/web/20201124171922im_/https://ofmodemsandmen.com/images/sqm/sqm10.jpg"/></p>
+<p>Leave the <em>Link Layer</em> at <strong>None (default)</strong>.</p>
+<p>Click on <strong>Save&Apply;</strong> to save these changes and enable SQM on that interface.</p>
+<p>Measure your latency again with the <a href="https://web.archive.org/web/20201124171922/http://www.dslreports.com/speedtest">DSLReports Speedtest</a>. You should notice that the measured ping times are only slightly larger during the downloads and uploads. Try using VoIP, Skype, Facetime, gaming, DNS, and general web browsing. They should be much more pleasant, even if someone's uploading or downloading a lot of data. </p>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="footer">
+<div class="copyright">
+<p>&copy; Of Modems and Men. All rights reserved.</p>
+</div>
+</footer>
+
+<script src="/web/20201124171922js_/https://ofmodemsandmen.com/assets/js/jquery.min.js"></script>
+<script src="/web/20201124171922js_/https://ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
+<script src="/web/20201124171922js_/https://ofmodemsandmen.com/assets/js/skel.min.js"></script>
+<script src="/web/20201124171922js_/https://ofmodemsandmen.com/assets/js/util.js"></script>
+<script src="/web/20201124171922js_/https://ofmodemsandmen.com/assets/js/main.js"></script>
+</body>
+</html><!--
+     FILE ARCHIVED ON 17:19:22 Nov 24, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:27:18 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.39
+  exclusion.robots: 0.045
+  exclusion.robots.policy: 0.037
+  esindex: 0.006
+  cdx.remote: 15.447
+  LoadShardBlock: 159.647 (3)
+  PetaboxLoader3.datanode: 121.273 (4)
+  PetaboxLoader3.resolve: 152.851 (2)
+  load_resource: 145.159
+-->

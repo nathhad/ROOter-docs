@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=3grhEDQT" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ofmodemsandmen.com/ipset.html","20240625080029","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1719302429");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="/web/20240625080029cs_/http://www.ofmodemsandmen.com/assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>DNSMasq-IPset</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>handle urls</p>
+								<h2>Using IPSet in Connection Balancing</h2>
+							</header>
+							<p>Many large web sites such as Netflix and YouTube have a large number of servers with different IP Addresses. When you use DNS to look up the IP Address of one of these sites you may get a different IP Address each time you do. This presents a difficulty for Connection Balancing since you need to know the <strong>Destination IP Address</strong> to handle traffic for a specific site. If this changes each time you access the web site then you can't properly handle traffic to it.</p>
+                            <p>What we have instead are known as <em>IPsets</em>, which replace the Destination IP Address in a <strong>Connection Balancing Rule</strong>. An <em>IPSet</em> is a named list of URLs that we wish to match our traffic against. If the Destination IP Address of the traffic matches an IP Address associated with one of the URLs in the list then that part of the Rule is true. This is all done automatically behind the scenes.</p>
+                            <p>To create and manage IPSet lists go to the <strong>Network</strong> menu and the <strong>DNSMasq IPSet</strong> submenu.</p>
+                            <p><img src="/web/20240625080029im_/http://www.ofmodemsandmen.com/images/ipset/ipset1.jpg"/></p>
+                            <p>To add a new list click on the <strong>Add</strong> button. To remove an existing list click on it's <strong>Delete</strong> button.</p>
+                            <p>Each list must have an <em>IPSet Name</em> as that is the name used in the IPSet entry in the Load Balancing Rules section. To make the list active the <em>Enabled</em> box must be checked.</p>
+                            <p>The <em>Managed Domain List</em> contains all the URLs of the web sites we wish to match against using this particular list. A list can contain a large number of URLs although it is easier to manage if your lists contain related URLs.</p>
+                            <div class="box alt">
+									<div class="row 50% uniform">
+										<div class="3u"><span class="image fit"><img src="/web/20240625080029im_/http://www.ofmodemsandmen.com/images/ipset/ipset2.jpg" alt=""/></span></div>
+										<div class="3u"><span class="image fit"><img src="/web/20240625080029im_/http://www.ofmodemsandmen.com/images/ipset/ipset3.jpg" alt=""/></span></div>
+										<div class="3u"><span class="image fit"><img src="/web/20240625080029im_/http://www.ofmodemsandmen.com/images/ipset/ipset4.jpg" alt=""/></span></div>
+										<div class="3u"><span class="image fit"><img src="/web/20240625080029im_/http://www.ofmodemsandmen.com/images/ipset/ipset5.jpg" alt=""/></span></div>
+									</div>
+								</div>
+                            <p>After making all your changes, click on <strong>Save&Apply;</strong>.</p>
+                            <p>When using IPSets with the Connection Balancing Rules section you use the <em>IPSet Name</em> of the specific list to match against the URLs it contains.</p>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/web/20240625080029js_/http://www.ofmodemsandmen.com/assets/js/jquery.min.js"></script>
+			<script src="/web/20240625080029js_/http://www.ofmodemsandmen.com/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/web/20240625080029js_/http://www.ofmodemsandmen.com/assets/js/skel.min.js"></script>
+			<script src="/web/20240625080029js_/http://www.ofmodemsandmen.com/assets/js/util.js"></script>
+			<script src="/web/20240625080029js_/http://www.ofmodemsandmen.com/assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 08:00:29 Jun 25, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:27:11 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.59
+  exclusion.robots: 0.062
+  exclusion.robots.policy: 0.049
+  esindex: 0.01
+  cdx.remote: 19.858
+  LoadShardBlock: 108.864 (3)
+  PetaboxLoader3.datanode: 96.679 (5)
+  PetaboxLoader3.resolve: 280.963 (2)
+  load_resource: 325.507
+  loaddict: 29.626
+-->
