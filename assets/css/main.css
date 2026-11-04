@@ -1,6 +1,7 @@
 @charset "UTF-8";
-//@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700");
+@import url(/web/20260617061128cs_/https://ofmodemsandmen.com/assets/css/font-awesome.min.css);
+//@import url("https://web.archive.org/web/20260617061128cs_/https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url("https://web.archive.org/web/20260617061128cs_/https://fonts.googleapis.com/css?family=Open Sans:300,400,500,600,700");
 
 /*
 	Hielo by TEMPLATED
@@ -3779,7 +3780,7 @@
 			}
 
 				#header > a[href="#menu"]:before {
-					content: "\f0c9";
+					content: "";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
 					font-family: FontAwesome;
