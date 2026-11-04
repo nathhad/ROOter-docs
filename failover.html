@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+
+
+
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://www.ofmodemsandmen.com/failover.html","20250905185550","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1757098550");
+</script>
+
+
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>Connection Failover</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>using multiple Internet sources</p>
+								<h2>Connection Failover</h2>
+							</header>
+							<p>If you have another source of Internet and want to use a modem as backup in case of connection loss then Connection Failover will work to switch between the other source and the modem without user intervention. This feature is only available on routers using 8meg of flash and only works if the other Internet source is something other than a modem. Routers using an 16meg image use <a href="loadbalancing.html" class="button alt icon fa-balance-scale">Load Balancing</a> to achieve failover.</p>
+							<p>Connection Failover is restricted to two different types of Internet source. The <strong>Primary</strong> source can be either the Wan (wired Internet) or a Wifi Hotspot connection. The <strong>Secondary</strong> source can be one of the two modems. Each Internet source is checked to see if it is working by pinging a specified server. If the Primary source fails the ping test then the Secondary source is activated to handle traffic from the Internet. When the Primary source is active again then a switch is made back to it and the Secondary source is deactivated.</p>
+                            <p>To set up Failover go to the <em><strong>Modem</strong></em> menu and the <strong>Connection Failover</strong> submenu.</p>
+							<p><img src="images/failover/failover1.jpg" alt="" width="600" height="515"/></p>
+                            <div class="10u 12u$(small)">
+                            	<ul>
+                                <li><strong>Failover Enabled</strong> is used to enable this feature. By default it is disabled.</li>
+                            <li><strong>Tracking IP</strong> is the IP Address of a site you wish to ping. An IP Address <strong>must</strong> be entered in this box in order for Connection Monitoring to work. By clicking on the green plus at the end of the box you can have multiple IP Addresses that you wish to ping. If multiple Tracking IPs are defined then these are pinged one after the other and the number of responses are kept track of for that ping session.</li>
+                            <li><strong>Tracking Reliability</strong> is the number of <strong>Tracking IPs</strong> that must respond each time a ping session is done in order for the connection to be deemed up or down. It must be less than or equal to the number of Tracking IPs defined.</li>
+                            <li><strong>Ping Count</strong> is the number of packets sent during a ping to a Tracking IP. A larger number of packets can ensure that a ping response occurs in congested areas.</li>
+                            <li><strong>Ping Interval</strong> is the amount of time between each ping session. The longer this interval the less data that is used pinging the Tracking IPs but it is also slower to determine if a connection is up or down.</li>
+                            <li><strong>Ping Timeout</strong> is the amount of time that the Connection Monitor waits after sending a ping for its response. If no response is obtained in this time then the ping is assumed to be lost. This time may be increased if congestion is slowing down your connection.</li>
+                            <li><strong>Interface Down</strong> is the number of ping sessions that failed to return the number of pings defined by <strong>Tracking Reliability</strong> as required before the connection is deemed to be down.</li>
+                            <li><strong>Interface Up</strong> is the number of  ping sessions that  returned a response of the number of pings defined by <strong>Tracking Reliability</strong> as required before the connection is deemed to be up.</li>
+                            </ul>
+                            </div>
+                            <p>The default values will work quite well in most situations but connections that suffer from congestion or other problems may have to be customized to avoid false indications of the connection being down.</p>
+                            <p>The status of Failover is displayed at the bottom of the <strong>Status Overview</strong> page.</p>
+							<p><img src="images/failover/failover2.jpg" alt="" width="554" height="160"/></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 18:55:50 Sep 05, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:18:52 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.523
+  exclusion.robots: 0.056
+  exclusion.robots.policy: 0.043
+  esindex: 0.01
+  cdx.remote: 90.647
+  LoadShardBlock: 298.415 (3)
+  PetaboxLoader3.resolve: 212.276 (4)
+  PetaboxLoader3.datanode: 211.132 (4)
+  load_resource: 145.844
+-->
