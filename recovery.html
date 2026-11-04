@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+
+
+
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ofmodemsandmen.com/recovery.html","20260508122600","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1778243160");
+</script>
+
+
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>Recovery GUI</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>Recovery GUI</p>
+								<h2>Flashing a Router using the Recovery GUI</h2>
+							</header>
+							<p>On many routers you can not flash the ROOter firmware using the factory GUI. The factory firmware will not accept the ROOter firmware as vaild so you have to find other ways to do the flashing. One of these is the Recovery GUI.</p>
+                            <p>As we talked about on the <a href="router101.html"><span>All About Routers</span></a> page, many routers have what is known as a Recovery GUI built into their bootloader. This gives you a web based method of flashing the router that doesn't depend on the factory firmware.</p>
+                            <p>While different routers have different versions of the Recovery GUI, they all work the same way.</p>
+                            <div class="10u 12u$(small)">
+                            	<ul>
+                                	<li>Connect your computer to the router's LAN port using an Ethernet cable.</li>
+                                	<li>Power up the router while holding in the reset button.</li>
+                                    <li>After a certain amount of time release the button.</li>
+                                    <li>Use your browser to go to the Recovery web page.</li>
+                                    <li>Upload the new firmware and flash the router using this web page.</li>
+                                </ul>
+                             </div>
+                              <h4>Computer Static IP Address</h4>
+                             <p>The one thing that all Recovery GUI have in common is they don't run a DHCP server. This means they will not give your computer an IP Address so you will be unable to access the Recovery web page until you set your computer to have a Static IP Address. Let's look at how to do that on Windows.</p>
+                             <p>First you need to know what IP Address to use for the computer. Almost all Recovery web pages are at <strong>192.168.1.1</strong> so you can set the computer to <strong>192.168.1.2</strong> or any other address in the <strong>.1.</strong> subnet (192.168.1.10, 192.168.1.100, etc).</p>
+                             <p>Press the <strong>Windows key + I</strong> combination. In the ensuing dialog box select the <strong>Network and Internet</strong> tile.</p>
+                              <p><img src="images/recovery/static0.jpg" alt=""/></p>
+                              <p>In the following <strong>Status</strong> dialog click on the <strong>Properties</strong> button.</p>
+                              <p><img src="images/recovery/static1.jpg" alt=""/></p>
+                              <p>In the next dialog scroll down to the <strong>IP Settings</strong> section and click on the <strong>Edit</strong> button.</p>
+                              <p><img src="images/recovery/static2.jpg" alt=""/></p>
+                              <p>The <strong>Edit IP settings</strong> dialog will appear. Do the following.</p>
+                              <div class="10u 12u$(small)">
+                            	<ul>
+                                	<li> Set the mode to Manual.</li>
+                                	<li>Make sure IPv4 is On.</li>
+                                    <li>Set the IP Address to 192.168.1.2 or whatever IP Address you chose.</li>
+                                    <li> Set the Subnet Prefix length to 24.</li>
+                                </ul>
+                             </div>
+                             <p><img src="images/recovery/static3.jpg" alt=""/></p>
+                             <p>Click on the <strong>Save</strong> button. Your computer now has a static IP Address of 192.168.1.2.</p>
+                             <p>To set your computer back to Automatic IP Address simply select the <strong>Automatic</strong> mode in the <strong>Edit IP settings</strong> dialog. You will want to do this when you have completed flashing the router.</p>
+                              <h4>Getting to the Recovery Web Page</h4>
+                              <p>With the computer set up so it can access the Recovery web page by giving it a Static IP Address, we are ready to force the router into running a web server so we have a web page to access. Even if you don't know if the router's bootloader has a Recovery GUI the following will allow you to find out.</p>
+                              <p>Unplug the router's power and connect an Ethernet cable from one of it's LAN ports to your computer.</p>
+                              <p>Hold in the reset button on the router. This is usually inside a small hole near the power socket but may be elsewhere on the panel.</p>
+                              <p><img src="images/recovery/rreset1.jpg" alt=""/></p>
+                              <p>Using a dull pencil works quite well in most cases although some routers have a very small hole. Be careful using something sharp when doing this as the button is plactic and can be damaged. Then plug in the router's power. Doing this can require 3 hands to hold and manipulate things so an easier way is to plug the router's power pack ito a switched power strip. Using the switch on that is much easier than plugging in a power jack while still holding the reset button in.</p>
+                              <p>So keep holding in the reset button and power on the router. Keep holding in the reset button. If it slips then power off the router and try again.</p>
+                              <p>The next questions is, how long do you hold in the reset button before releasing it? The answer is, it varies. For most routers you only need to hold it for at most 10 seconds but some routers are much more time critical. While the router is powering up the LEDs will flash and go on and off in some sort of pattern which is the same every time you do this. With many routers there is no set time that you have to hold in the button except for a minimum time. But some have a very narrow window in which the button must be released. This depends on what bootloader the router uses.</p>
+                              <p>In general you can assume that the button is held in for 10 seconds and then released. Then you can use your browser to go to <strong>http://192.168.1.1/index.html</strong> to access the Recovery web page. But what about those routers that are time critical? How do you know when to release the button? The following table lists some of the more common time critical router models that have a Recovery GUI.</p>
+                              
+                              <div class="table-wrapper">
+							  <table width="73%" class="alt">
+							    <thead>
+							      <tr>
+							        <th width="321"><u>Router Model</u></th>
+							        <th width="700"><div align="center">LED Action</div></th>
+							        <th width="328"><div align="center">Notes</div></th>
+						          </tr>
+						        </thead>
+							    <tr>
+							      <td>Gl.iNet GL-Mifi</td>
+							      <td><div align="left">Power LED will light up. Other LEDS will flash 6 times and the LTE light will faintly flash twice. Release button at this point.</div></td>
+							      <td><div align="center"> </div></td>
+						        </tr>
+                                <tr>
+							      <td>Gl.iNet GL-AR150 GL-AR300M GL-AR750 GL-AR750S GL-X750 GL-MT300N-V2 GL-E750</td>
+							      <td><div align="left">Power LED will light up. Other LEDS will flash 5 times. Release button at this point.</div></td>
+							      <td><div align="center"> </div></td>
+						        </tr>
+                                <tr>
+							      <td>Gl.iNet GL-MT300N GL-MT300A</td>
+							      <td><div align="left">Power LED will light up. Other LEDS will flash 3 times. Release button at this point.</div></td>
+							      <td><div align="center"> </div></td>
+						        </tr>
+                                <tr>
+							      <td>Gl.iNet GL-S1300 GL-B1300</td>
+							      <td><div align="left">Leftmost LED will light up. The rightmost LED flashes 4 times, then the middle LED turns on and stays on. Release button at this point.</div></td>
+							      <td><div align="center"> </div></td>
+						        </tr>
+                                <tr>
+							      <td>Gl.iNet older GL-B1300</td>
+							      <td><div align="left">Leftmost LED will light up. Both the middle LED and the rightmost LED flash 5 times at the same time then they stay on. Release button at this point.</div></td>
+							      <td><div align="center"> </div></td>
+						        </tr>
+                                <tr>
+							      <td>Gl.iNet GL-MT1300</td>
+							      <td><div align="left">Power LED will light up. The LED is blue at first, flash twice slowly, then 5 times a bit quicker and turn to white and stay on. Release button at this point.</div></td>
+							      <td><div align="center"> </div></td>
+						        </tr>
+                                 <tr>
+							      <td>ZBT WE826-Q</td>
+							      <td><div align="left">Power LED will light up. WAN and LAN1 LED will flash twice. Release button after this.</div></td>
+							      <td><div align="center">Flashing must be complete by 4.5 minutes after power on or router will reboot.</div></td>
+						        </tr>
+                               </table>
+							</div>
+                            <p>Once you have released the reset button you can use your browser to got to <strong>http://192.168.1.1/index.html</strong> to access the Recovery web page. If your router has a Recovery GUI you will see a web page that allows flashing the router. On a time sensitive router you may need to do this procedure several times to get the correct point to release the reset button. If you can't get a Recovery web page then the router probably doesn't have one.</p>
+                            <p>When you access the Recovery web page you will be greeted by one of several different pages depending on the bootloader used in the router. Some are very simple, others are more complex. Some are in English and some are in Chinese. Let's look at some of the different Recovery web pages and see what needs to be done to flash the router.</p>
+                            <h4>Flashing the Router from the Recovery Web Page</h4>
+                            <p>At this point we have finally arrived at the Recovery GUI web page. Now what? Each bootloader has it's own version of the web page so we will look at a few and show what you need to do to flash the router.</p>
+                            <p><strong>The Simple English Web Page</strong></p>
+                            <p>Some Recovery web pages are very simple and all you have to do is click a button to find and upload the new firmware file and then click another button to flash the router.</p>
+                            <p><img src="images/recovery/recovery1.jpg" alt=""/></p>
+                            <p><strong>The Simple Chinese Web Page</strong></p>
+                            <p>Many of the Recovery GUI web pages are in Chinese so you need to know what to do in order to navigate them. This web page, used by ZBT on a number of routers, is quite simple once you know how.</p>
+                            <p><img src="images/recovery/recovery2.jpg" alt=""/></p>
+                            <p>Click on the button and select your firmware file in the ensuing dialog box. A confirmation dialog box will then appear.</p>
+                            <p><img src="images/recovery/recovery3.jpg" alt=""/></p>
+                            <p>Click on the OK button to flash the firmware. A progess page will appear and show the flashing.</p>
+                            <p><strong>The Complex Chinese Web Page</strong></p>
+                            <p>Some Recovery GUI web pages can be very intimidating, especially if they are in Chinese. The Breed bootloader has one of these.</p>
+                            <p><img src="images/recovery/recovery4.jpg" alt=""/></p>
+                            <p>Click on the indicated button and you will go to the web page used for flashing.</p>
+                            <p><img src="images/recovery/recovery5.jpg" alt=""/></p>
+                            <p>Check the indicated box, use the Browse button to search for your firmware file and then click on the Flash button. You will then receive a confirmation dialog. Click on the button to flash the firmware.</p>
+                            <p><img src="images/recovery/recovery6.jpg" alt=""/></p>
+                            <p>A progress page will appear so you know the status of the flashing.</p>
+                            
+                            <h4>Some Notes about Flashing</h4>
+                            <p>Each router has it's own quirks when it comes to flashing them using the Recovery GUI. We will look at some of these to, hopefully, make it easier to flash them.</p>
+                             <div class="10u 12u$(small)">
+                            	<ul>
+                                	<li>Not every router has a Recovery GUI. If you are unsure about this then try the procedure for getting access to the Recovery web page and then check if it exists. You may want to try several times and watch the Leds while you are doing this. They will have a pattern they follow every time and you may see what that is. Generally, the LEDs will flash when the reset button should be held down.</li>
+                                    <li>Gl.iNet routers are very picky about when you release the reset button. The window that takes place in is very short and you may need to repeat the procedure several times before you get it right.</li>
+                                    <li>The ZBT WE826-Q is very sensitive to the amount of time you have to flash the firmware. It is not sensitive to when you release the reset button but the amount of time after you power up the router until the flash is completed is. You have about 4.5 minutes from power up until the router reboots. If the flashing has not completed by that time it will be ruined and you will have to do the procedure all over again. For this reason it is important to go through the flashing procedure quickly so there is enough time for the flash to complete before the reboot occurs. This means you must know exactly where the firmware file is located so you can browse to it quickly and, since this router used the complex Breed bootloader, you must know the steps needed to start the flash. Because of this it may take several tries to successfully flash this router.</li>
+                                	
+                                </ul>
+                             </div>
+                             
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 12:26:00 May 08, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:16:35 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.428
+  exclusion.robots: 0.039
+  exclusion.robots.policy: 0.03
+  esindex: 0.007
+  cdx.remote: 13.533
+  LoadShardBlock: 58.272 (3)
+  PetaboxLoader3.datanode: 65.886 (4)
+  load_resource: 168.947
+  PetaboxLoader3.resolve: 134.195
+-->

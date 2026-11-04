@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+
+
+
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://www.ofmodemsandmen.com/hostless.html","20260714191851","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1784056731");
+</script>
+
+
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>Hostless Modems</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>What is a Hostless modem</p>
+								<h2>All About Hostless Modems</h2>
+							</header>
+							<p>One category of modems that is supported by the ROOter firmware is the <strong>hostless</strong> modem.</p>
+                              <p>Hostless is a term used by ZTE to describe a type of modem that, when plugged into your computer, appears as an Ethernet device and is accessed using your web browser. These are known as <strong>web GUI</strong> hostless modems. <strong>Huawei Hilink</strong> modems are examples of this type of modem. Other names for these modems are <strong>Wifi Modem</strong> or <strong>Wingle</strong>.</p>
+<p>Another type of host-less modem is the <strong>GUI</strong> version, which still appears as an Ethernet device when plugged into the computer but is accessed through a Connection Manager program rather than the web browser. The <strong>ZTE MF825A</strong> is an example of this type of modem. This type of modem is rare.</p>
+                    <p>Some modems come in both regular USB or hostless versions and it is important that you know which version you have, since they require a different set up in the ROOter.</p>
+                              <h3>Auto-connect</h3>
+                              <p>When using a hostless modem in a ROOter it is important that it be configured to auto-connect when powered up. You must first plug it into a computer and use the web browser to set up the modem to auto-connect. This way it will automatically connect when it is plugged into the router. Most hostless modems do auto-connect by default.</p>
+                              <p>The MF825A is an exception to this rule, as you use the Connection Manager program that installs when you plug it into a computer to set up the APN and other connection details but it does not auto-connect. When it is plugged into the ROOter the proper connect string is sent to the modem to make it do an automatic connect.</p>
+                              <p>Because these modems are set up using the computer web browser you don't need to enter an APN, User name or Password on the <em>Modem -&gt; Connection</em> page. This information is already stored in the modem when it is plugged into the router.</p>
+                          <h3>IP Address</h3>
+                              <p>When using this type of modem you must be aware of the IP address that you use to access the modem using the web browser. On ZTE hostless modems this address is <strong>192.168.0.1</strong>, while Huawei Hilink modems use <strong>192.168.8.1</strong>.</p>
+                              <p>The subnet of the IP Address 192.168.<strong>0</strong>.1 is &quot;0&quot; while the subnet of 192.168.<strong>8</strong>.1 is &quot;8&quot;.</p>
+                              <p>This can cause a problem if the router uses the same IP address or subnet as the modem does. By default a ROOter uses 192.168.1.1 to access the router's web interface and a conflict will happen if you are using some hostless modems. <strong>The modem and the router can not be on the same subnet</strong>.</p>
+                              <p>The way to avoid this is to change the IP address of the router. In the router web interface go to <em>Network -&gt; Interfaces</em> and click on the <em>Edit </em>button for the LAN. Change the IPv4 address to 192.168.100.1 and then click on <em>Save &amp; Apply</em>. You will have to manually change the IP address to 192.168.100.1 in the web browser in order to get back to the router's web interface.</p>
+                              <p>By giving the router a different subnet than the modem the router will work correctly and data will flow properly from the client devices to the internet. Most hostless modems are already using a different subset so this change is needed only for some modems.</p>
+                              <p>You can then access the modem's web GUI using the same IP address as you would when it was plugged into a computer.</p>
+                              <h3>Network Status and SMS</h3>
+                              <p>Because these modems appear as an Ethernet device when plugged into the router there will be limited information displayed on the Network Status page. The same thing applies to SMS Messaging, as the modem is not accessable using AT Commands like a regular USB modem.</p>
+
+					  </div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 19:18:51 Jul 14, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:16:32 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 1.032
+  exclusion.robots: 0.094
+  exclusion.robots.policy: 0.066
+  esindex: 0.017
+  cdx.remote: 15.196
+  LoadShardBlock: 122.727 (3)
+  PetaboxLoader3.datanode: 149.118 (4)
+  PetaboxLoader3.resolve: 215.83 (2)
+  load_resource: 275.679
+-->

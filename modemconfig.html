@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+
+
+
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://www.ofmodemsandmen.com/modemconfig.html","20260714190832","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1784056112");
+</script>
+
+
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>Modem Configuration</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>setup modem</p>
+								<h2>Configuring a Modem</h2>
+							</header>
+							<p>Once you have flashed your router to use the ROOter firmware and have finished configuring the router functions, it is time to configure it to use your USB modem.</p>
+                              <p><strong>Do not plug the modem into the router until this configuration is completed</strong>. If you are using a PCie or M.2 modem in the router's internal slot then you must reboot the router after the configuration in order for the modem to connect.</p>
+                              <p>Log on to the ROOter web interface and select the <em><strong>Modem</strong></em> menu and <em><strong>Connection Profile</strong></em> submenu.</p>
+                              <p>Rooter uses <strong>Profiles</strong> to hold the information connected with the modem and how it connects. This allows having different information for different modem and SIM combinations so, once they are set up, you can swap modems or SIMs and still have it connect automatically without changing anything.</p>
+                              <p>If you are using only a single modem and SIM, or multiple modems with the same SIM, then you only need to address the <strong>Default Profile</strong>. If you use multiple SIMs or are using the Dual Modem feature then you must also use <strong>Custom Profile</strong>.</p>
+                              <p>We will look at setting up the <strong>Default Profile</strong> first. This Profile will be used if there is not a <strong>Custom Profile</strong> to match the modem/SIM combination.</p>
+                              <h3>Default Profile</h3>
+								<p><img src="images/modemconfig/modem1.jpg" alt=""/></p>
+                                <p align="left">In most cases all that is needed is to fill in the APN which was provided by your ISP. <strong>This is required by ROOter as it is needed to make the connection to your ISP's network.</strong> If your ISP requires more information in order to connect they will provide that to you and it can be filled in on this tab as well.</p>
+                                <p align="left">If you wish your TimeZone to be set automatically when the modem connects to the Internet change the <em><strong>Auto Set Timezone</strong></em> to <strong>Yes</strong>. This will attempt to determine your timezone from your connection but it may not always be accurate if your Provider is using servers in a different area.</p>
+                          <p>This is all the information that is needed to make a connection to your Provider's Network. Click on the <em>Save &amp; Apply</em> button in the lower right corner and wait for the changes to be applied. You can now plug the modem into the router and it will automatically make a connection to your Provider's Network. If you are using an internal modem then you must reboot at this point.</p>
+                          <p>If the modem is plugged into the router when you power it up, it will automatically connect to the Provider's Network as soon as the router has finished its boot process.</p>
+                          <p>Any changes made to a Connection Profile will not be applied until the next time the modem attempts to connect, either by plugging in or by rebooting.</p>
+                          
+							<h3>Custom Profile</h3>
+                            <p>Custom Profiles are added as needed by clicking on the <em>ADD</em> button.</p>
+                            <p><img src="images/modemconfig/modem2.jpg" alt=""/></p>
+                            <p>This will add a new Custom Profile to ROOter so you can have unique information for a specific modem/SIM combination.</p>
+                            <p><img src="images/modemconfig/modem3.jpg" alt=""/></p>
+                            <p>This is similar to the Default Profile except that there is now a section where you can specify exactly which modem or modem/SIM combination will use this profile.</p>
+                            <p><img src="images/modemconfig/modem4.jpg" alt=""/></p>
+                            <p>The Custom Profile can be selected by either the modem information (ID, IMEI or name) or by the SIM information (IMSI or ICCID).</p>
+                            <p>The Optional Select allows you to set another selection criteria so that the profile will be used by a very specific modem/SIM combination.</p>                            <p><img src="images/modemconfig/modem5.jpg" alt=""/></p>
+                            <p>The rest of the fields in a Custom Profile are the same as in the Default profile. Always click <em>Save &amp; Apply</em> after adding or changing a Profile.</p>
+                            
+                            <p> <a href="modemconfig1.html" class="button special">Configuring the Advanced Tab </a> </p>
+                        	<p> <a href="modemconfig2.html" class="button special">Configuring the Connection Monitoring Tab </a> </p>
+                          
+                      </div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 19:08:32 Jul 14, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:16:33 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.555
+  exclusion.robots: 0.058
+  exclusion.robots.policy: 0.044
+  esindex: 0.007
+  cdx.remote: 9.205
+  LoadShardBlock: 125.751 (3)
+  PetaboxLoader3.datanode: 100.212 (4)
+  PetaboxLoader3.resolve: 99.864 (2)
+  load_resource: 129.098
+-->

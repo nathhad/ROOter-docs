@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+
+
+
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ofmodemsandmen.com/package.html","20260508121315","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1778242395");
+</script>
+
+
+<!-- End Wayback Rewrite JS Include -->
+
+		<title>ROOter by Of Modems and Men</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">ROOter <span>by Of Modems and Men</span></a></div>
+				<a href="#menu">MENU</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About ROOter</a></li>
+					<li><a href="routers.html">Supported Routers</a></li>
+                    <li><a href="modems.html">Supported Modems</a></li>
+                    <li><a href="firmware.html">Firmware Downloads</a></li>
+                    <li><a href="documentation.html">Documentation and Tutorials</a></li>
+                    <li><a href="other.html">Other Downloads</a></li>
+                    <li><a href="redirect.html">ROOter Forum</a></li>
+                    <li><a href="custom.html">Custom ROOter Firmware</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Bringing Routers and Modems together in style</p>
+						<h2>Adding Packages</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>Package problems</p>
+								<h2>The Facts about Adding Packages to ROOter</h2>
+							</header>
+							<p>The more advanced user of ROOter firmware may, at times, want to add a different feature to their router using the OpenWrt repository. This doucument will outline some facts about this process.</p>
+                          <h3>Memory Space</h3>
+                          <p>This mostly a problem for routers that are using a <strong>8meg image</strong> but can also happen to some routers using the <strong>16meg image</strong> if the packages are large. See the <a href="routers.html">supported routers</a> list to see which image type you are using. A brief explanation of how router memory works will make this clearer.</p>
+                          <p>The Flash memory of the router is similar to a hard drive since it holds the firmware and data used by the router. The firmware is compressed very much like a Zip file when it is in Flash memory so that more data can be packed into a smaller space. When the router boots up, it unpacks the firmware from Flash memory into RAM and then runs the program from there. It does not run from Flash memory but from RAM. A part of Flash memory is used to hold data that must survive a router power down, like the configuration information when you set up the router. In ROOter, this is about 90Kb so that much Flash memory must be free at all times. You can check how much free Flash memory space your router has by going to the <em><strong>System</strong></em> menu and then to the <em><strong>Software</strong></em> submenu.</p>
+<p><img src="images/package/pack1.jpg" alt="" width="360" height="226"/></p>
+                          <p>Subtract 90KB from what is shown and that is how much space you have left to hold new packages.</p>
+                          <p>You can get an idea of how much memory space a new feature requires by looking at the package sizes in the <a href="https://web.archive.org/web/20260508121315/https://downloads.openwrt.org/chaos_calmer/15.05.1/ar71xx/generic/packages/packages/">OpenWrt repository</a> or the <a href="https://web.archive.org/web/20260508121315/http://downloads.lede-project.org/releases/17.01.2/packages/mips_24kc/packages/">Lede repository</a>. Remember that a package may also install other packages that it depends on so the memory requirements will almost always be much larger than just the base package size. Plus, these packages are stored in Flash memory uncompressed so they take up the full amount of space, unlike those inside the firmware image.</p>
+                          <p>The first thought in this situation is to remove any unneeded packages from the firmware to free up more memory to add the new feature. It appears that you can uninstall packages from the <em><strong>Software</strong></em> submenu and, in theory, get more memory.</p>
+                          <p>This does not work, however.</p>
+                          <p>Removing a package from the firmware does not actually delete it but just marks it as removed. It still exists inside the firmware image taking up space. In fact, it requires more space since it requies space to tell that is marked as removed. You can not free up any memory by doing this. The only way to free up memory by removing unwanted packages is to build a new image without those packages.</p>
+                          
+                          <p>Then it is RAM that limits package addition. When the firmware image is uncompressed into RAM it takes up a lot more space that what it did in Flash memory. An 8meg image requires about 40meg with a 16meg image needing 60meg.. You can see the status of the router RAM by going to the <strong>Status</strong> menu and the <strong>Overview</strong> submenu.</p>
+                          <p><img src="images/package/pack2.jpg" alt=""/></p>
+                          <p>From this you can see that even though the router has 32meg of RAM only 28meg is available for use. And  about 2meg is used for buffers to hold the data packets that the router is sending throughout the network. When you add in the extra RAM that a modem requires the amount of free RAM can drop to 600Kb. This doesn't leave a lot left for adding those extra packages. Any extra packages will take away memory from the buffers and that will affect router performance in a big way. LAN speed and modem speed will suffer and you will find the web GUI very slow to respond. In fact, the router turns into a dog.</p>
+<h3>Kerrnel Mismatch</h3>
+                          <p>Even if you have enough flash memory to hold the new feature you wish to add there can be a problem with the Linux kernel used by the firmware.</p>
+                          <p>The kernel is the basic part of Linux that is used by OpenWrt with all the features being added on top of this. Kernels are numbered such as 3.18 or 4.1 to tell how new they are. As the kernel number increases this indicates that changes have been made to the code and these changes may not be backward compatible with older kernel versions.</p>
+                          <p>Certain programs made to work with kernel 3.18 may not work correctly with kernel 4.1 unless they are recompiled or modified. This is usually restricted to those packages whose name start with <strong>kmod-</strong>. As mentioned above, when you install a new package into ROOter it may also install other packages that it requires. If one of these other packages is a kernel package (whose name starts with <strong>kmod-</strong>) then the kernel used in the ROOter firmware must match the kernel used when the package was compiled.</p>
+<p>If the kernel numbers do not match between the firmware and the package being installed then ROOter will give a <strong>kernel mismatch error</strong> and not allow it to be installed. This is to prevent software problems from occurring due to incompatible kernels.</p>
+                          <p>The problem that arises here is that ROOter does not use the exact same kernel as that used when the OpenWrt repository was compiled. Even though ROOter uses OpenWrt for its images, the kernel is given a new number every time you build with it. Only those images that were compiled at the same time as the repository was created will have a matching kernel number. ROOter will always have a different kernel number than the OpenWrt repository expects and would require its own repository to get around this problem                          </p>
+                          <p>The bottom line here is, you can't install a new feature if it requires the installation of any kernel packages from the OpenWrt repository.</p>
+
+					  </div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Of Modems and Men. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html><!--
+     FILE ARCHIVED ON 12:13:15 May 08, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:16:34 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.522
+  exclusion.robots: 0.05
+  exclusion.robots.policy: 0.039
+  esindex: 0.007
+  cdx.remote: 188.138
+  LoadShardBlock: 63.952 (3)
+  PetaboxLoader3.datanode: 81.476 (4)
+  PetaboxLoader3.resolve: 101.616 (2)
+  load_resource: 157.875
+-->
